@@ -1,0 +1,11 @@
+QMAKE_DEFAULT_INCDIRS = \
+    /usr/include/c++/7.2.0 \
+    /usr/include/x86_64-linux-gnu/c++/7.2.0 \
+    /usr/include/c++/7.2.0/backward \
+    /usr/include/clang/4.0.1/include \
+    /usr/local/include \
+    /usr/include/x86_64-linux-gnu \
+    /usr/include
+QMAKE_DEFAULT_LIBDIRS = \
+    /lib \
+    /usr/lib

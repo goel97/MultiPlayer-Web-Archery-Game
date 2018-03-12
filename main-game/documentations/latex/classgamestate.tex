@@ -1,0 +1,80 @@
+\hypertarget{classgamestate}{}\section{gamestate Class Reference}
+\label{classgamestate}\index{gamestate@{gamestate}}
+
+
+Class to store the State of the Game.  
+
+
+
+
+{\ttfamily \#include $<$gamestate.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgamestate_ab58660ea8cba18f34d30afdf9afeee3a}\label{classgamestate_ab58660ea8cba18f34d30afdf9afeee3a}} 
+\hyperlink{classgamestate_ab58660ea8cba18f34d30afdf9afeee3a}{gamestate} (Q\+Graphics\+Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Game\+State Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a2c5d0f47e823da319e366b4c3674520e}\label{classgamestate_a2c5d0f47e823da319e366b4c3674520e}} 
+Q\+Json\+Object \hyperlink{classgamestate_a2c5d0f47e823da319e366b4c3674520e}{get\+Json\+Object} ()
+\begin{DoxyCompactList}\small\item\em To get the Json Object of the Game\+State. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgamestate_acb59a99cf8d8582c1f9f81a83f2f5f73}\label{classgamestate_acb59a99cf8d8582c1f9f81a83f2f5f73}} 
+int \hyperlink{classgamestate_acb59a99cf8d8582c1f9f81a83f2f5f73}{id}
+\begin{DoxyCompactList}\small\item\em id = 0 in Server and id = 1 in Client \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a54c8ade27ab0bc446c9c178d15a2e9c5}\label{classgamestate_a54c8ade27ab0bc446c9c178d15a2e9c5}} 
+Q\+Graphics\+Scene $\ast$ \hyperlink{classgamestate_a54c8ade27ab0bc446c9c178d15a2e9c5}{state\+Scene}
+\begin{DoxyCompactList}\small\item\em Reference to the scene in the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a5c3589f6ddece131a18e3c725c0deace}\label{classgamestate_a5c3589f6ddece131a18e3c725c0deace}} 
+Q\+PointF \hyperlink{classgamestate_a5c3589f6ddece131a18e3c725c0deace}{Player1\+Position}
+\begin{DoxyCompactList}\small\item\em Stores the position of Player 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a27d4875191db36c69f2c1e0604ebf36f}\label{classgamestate_a27d4875191db36c69f2c1e0604ebf36f}} 
+Q\+PointF \hyperlink{classgamestate_a27d4875191db36c69f2c1e0604ebf36f}{Player2\+Position}
+\begin{DoxyCompactList}\small\item\em Stores the position of Player 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a5767b07aaa2c0bd46ff55795be98b440}\label{classgamestate_a5767b07aaa2c0bd46ff55795be98b440}} 
+Q\+PointF \hyperlink{classgamestate_a5767b07aaa2c0bd46ff55795be98b440}{Target\+Position}
+\begin{DoxyCompactList}\small\item\em Stores the position of the Target. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a4883320071dbaf4e4bb455035b7847a2}\label{classgamestate_a4883320071dbaf4e4bb455035b7847a2}} 
+bool \hyperlink{classgamestate_a4883320071dbaf4e4bb455035b7847a2}{is\+Arrow1}
+\begin{DoxyCompactList}\small\item\em Tells if the arrow of player 1 is in the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a216b721f59c27708fbd0bf1e46a11642}\label{classgamestate_a216b721f59c27708fbd0bf1e46a11642}} 
+bool \hyperlink{classgamestate_a216b721f59c27708fbd0bf1e46a11642}{is\+Arrow2}
+\begin{DoxyCompactList}\small\item\em Tells if the arrow of player 2 is in the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a25fbcaf81c3ce110b327fe86528de87a}\label{classgamestate_a25fbcaf81c3ce110b327fe86528de87a}} 
+Q\+PointF \hyperlink{classgamestate_a25fbcaf81c3ce110b327fe86528de87a}{Arrow1\+Position}
+\begin{DoxyCompactList}\small\item\em Stores the position of Arrow 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_af99cef79dd656dabaa8bf633a5df48a3}\label{classgamestate_af99cef79dd656dabaa8bf633a5df48a3}} 
+qreal \hyperlink{classgamestate_af99cef79dd656dabaa8bf633a5df48a3}{Arrow1\+Angle}
+\begin{DoxyCompactList}\small\item\em Stores the angle of Arrow 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_aeceed910e563d8a01b4eb690802f09a3}\label{classgamestate_aeceed910e563d8a01b4eb690802f09a3}} 
+qreal \hyperlink{classgamestate_aeceed910e563d8a01b4eb690802f09a3}{Arrow2\+Angle}
+\begin{DoxyCompactList}\small\item\em Stores the angle of Arrow 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a7dd00d203a53870b8fb0ddc1958ca5e6}\label{classgamestate_a7dd00d203a53870b8fb0ddc1958ca5e6}} 
+Q\+PointF \hyperlink{classgamestate_a7dd00d203a53870b8fb0ddc1958ca5e6}{Arrow2\+Position}
+\begin{DoxyCompactList}\small\item\em Stores the position of Arrow 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_ad4ce2f0afef6a295020a0939a9ab2679}\label{classgamestate_ad4ce2f0afef6a295020a0939a9ab2679}} 
+qreal \hyperlink{classgamestate_ad4ce2f0afef6a295020a0939a9ab2679}{Bow1\+Angle}
+\begin{DoxyCompactList}\small\item\em Stores the angle of Bow 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a6a224fa2eba20bda148712d3a9908e47}\label{classgamestate_a6a224fa2eba20bda148712d3a9908e47}} 
+qreal \hyperlink{classgamestate_a6a224fa2eba20bda148712d3a9908e47}{Bow2\+Angle}
+\begin{DoxyCompactList}\small\item\em Stores the angle of Bow 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_aa278aeddb0187a556914fb50dbca5449}\label{classgamestate_aa278aeddb0187a556914fb50dbca5449}} 
+int \hyperlink{classgamestate_aa278aeddb0187a556914fb50dbca5449}{hit}
+\begin{DoxyCompactList}\small\item\em Tells if the arrow of client had hit the target. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a0101bc9654cb25898514da6e5b614dc2}\label{classgamestate_a0101bc9654cb25898514da6e5b614dc2}} 
+int \hyperlink{classgamestate_a0101bc9654cb25898514da6e5b614dc2}{points1}
+\begin{DoxyCompactList}\small\item\em Stores the score of Player 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgamestate_a9fc1884d54b5d42554a784749cad7025}\label{classgamestate_a9fc1884d54b5d42554a784749cad7025}} 
+int \hyperlink{classgamestate_a9fc1884d54b5d42554a784749cad7025}{points2}
+\begin{DoxyCompactList}\small\item\em Stores the score of Player 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to store the State of the Game. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gamestate.\+h\item 
+gamestate.\+cpp\end{DoxyCompactItemize}

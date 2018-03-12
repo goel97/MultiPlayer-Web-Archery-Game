@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>arrow8.jpg</file>
+        <file>index.png</file>
+        <file>arrow.png</file>
+        <file>a1.png</file>
+        <file>Bubble.png</file>
+        <file>score.png</file>
+        <file>bug.png</file>
+        <file>bug1.png</file>
+        <file>target1.png</file>
+        <file>bug2.jpeg</file>
+        <file>bg.resized.jpeg</file>
+        <file>arrow_flip.png</file>
+        <file>stickman.png</file>
+        <file>arrow2.png</file>
+        <file>bow.png</file>
+        <file>arrow2_flip.png</file>
+        <file>bow_flip.png</file>
+        <file>bowright.png</file>
+        <file>arrowright.png</file>
+        <file>arrowleft.png</file>
+        <file>server.cpp</file>
+        <file>playerright.png</file>
+        <file>playerleft.png</file>
+        <file>bowleft.png</file>
+        <file>bg.png</file>
+        <file>bg.resized.png</file>
+        <file>arr.png</file>
+        <file>score1.png</file>
+    </qresource>
+</RCC>

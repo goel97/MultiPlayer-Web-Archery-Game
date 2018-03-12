@@ -1,0 +1,78 @@
+\hypertarget{classmyplayer1}{}\section{myplayer1 Class Reference}
+\label{classmyplayer1}\index{myplayer1@{myplayer1}}
+
+
+Class to create Player Object.  
+
+
+
+
+{\ttfamily \#include $<$myplayer1.\+h$>$}
+
+Inheritance diagram for myplayer1\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmyplayer1}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmyplayer1_a432fa3b50d94486945e6632035fdb79c}{myplayer1} (\hyperlink{classgamestate}{gamestate} $\ast$state\+\_\+param, \hyperlink{classtarget}{target} $\ast$t\+\_\+param)
+\begin{DoxyCompactList}\small\item\em Player Constructor to create player 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmyplayer1_a0313d001b5c663fc875c440cbafaefe0}\label{classmyplayer1_a0313d001b5c663fc875c440cbafaefe0}} 
+\hyperlink{classmyplayer1_a0313d001b5c663fc875c440cbafaefe0}{myplayer1} (int i, \hyperlink{classgamestate}{gamestate} $\ast$state\+\_\+param)
+\begin{DoxyCompactList}\small\item\em Player Constructor to create player 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmyplayer1_a12d8f91b8542cf36072da7ff7b9ad524}\label{classmyplayer1_a12d8f91b8542cf36072da7ff7b9ad524}} 
+void \hyperlink{classmyplayer1_a12d8f91b8542cf36072da7ff7b9ad524}{key\+Press\+Event} (Q\+Key\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em To process when a key is pressed by the user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmyplayer1_a94d95265e865928930664ef94fdc640b}\label{classmyplayer1_a94d95265e865928930664ef94fdc640b}} 
+void \hyperlink{classmyplayer1_a94d95265e865928930664ef94fdc640b}{set\+Client\+Local} (Q\+Web\+Socket $\ast$client\+\_\+param)
+\begin{DoxyCompactList}\small\item\em Function to set the reference to the Client Socket in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyplayer1_ab0cafd2fa2aa3e035a614971cc6a362e}\label{classmyplayer1_ab0cafd2fa2aa3e035a614971cc6a362e}} 
+\hyperlink{classbow}{bow} $\ast$ \hyperlink{classmyplayer1_ab0cafd2fa2aa3e035a614971cc6a362e}{bow1}
+\begin{DoxyCompactList}\small\item\em Reference to the bow of the player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmyplayer1_a507ebf8c50ae21fe3c8b0a89dd27713a}\label{classmyplayer1_a507ebf8c50ae21fe3c8b0a89dd27713a}} 
+\hyperlink{classgamestate}{gamestate} $\ast$ \hyperlink{classmyplayer1_a507ebf8c50ae21fe3c8b0a89dd27713a}{state}
+\begin{DoxyCompactList}\small\item\em Reference to the state of the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmyplayer1_aedcf8f8e414e01203289b4ba6355bf01}\label{classmyplayer1_aedcf8f8e414e01203289b4ba6355bf01}} 
+\hyperlink{classtarget}{target} $\ast$ \hyperlink{classmyplayer1_aedcf8f8e414e01203289b4ba6355bf01}{t}
+\begin{DoxyCompactList}\small\item\em Reference to the target in the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmyplayer1_ae95fc3dcaf03caa5fdfb1deb5ecc5c5c}\label{classmyplayer1_ae95fc3dcaf03caa5fdfb1deb5ecc5c5c}} 
+\hyperlink{classarrow}{arrow} $\ast$ \hyperlink{classmyplayer1_ae95fc3dcaf03caa5fdfb1deb5ecc5c5c}{player2\+Arrow}
+\begin{DoxyCompactList}\small\item\em Reference to the arrow of player 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmyplayer1_a58c818ae137860bfdd64197e37f25371}\label{classmyplayer1_a58c818ae137860bfdd64197e37f25371}} 
+Q\+Web\+Socket $\ast$ \hyperlink{classmyplayer1_a58c818ae137860bfdd64197e37f25371}{client\+\_\+local}
+\begin{DoxyCompactList}\small\item\em Reference to the Client Socket in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to create Player Object. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmyplayer1_a432fa3b50d94486945e6632035fdb79c}\label{classmyplayer1_a432fa3b50d94486945e6632035fdb79c}} 
+\index{myplayer1@{myplayer1}!myplayer1@{myplayer1}}
+\index{myplayer1@{myplayer1}!myplayer1@{myplayer1}}
+\subsubsection{\texorpdfstring{myplayer1()}{myplayer1()}}
+{\footnotesize\ttfamily myplayer1\+::myplayer1 (\begin{DoxyParamCaption}\item[{\hyperlink{classgamestate}{gamestate} $\ast$}]{state\+\_\+param,  }\item[{\hyperlink{classtarget}{target} $\ast$}]{t\+\_\+param }\end{DoxyParamCaption})}
+
+
+
+Player Constructor to create player 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+\_\+param} & State of the Game \\
+\hline
+{\em t\+\_\+param} & Target in the Game \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+myplayer1.\+h\item 
+myplayer1.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+#include "arrow.h"
+#include "score.h"
+#include <QTimer>
+#include <QtCore/qglobal.h>
+#include <QTime>
+#include <QGraphicsScene>
+#include <QList>
+#include <qmath.h>
+#include "target.h"
+#include "myplayer1.h"
+#include <typeinfo>
+#include <QDebug>
+<<<<<<< HEAD
+#include <QMutex>
+extern score * points;
+=======
+
+extern score * point1;
+extern score * point2;
+>>>>>>> 5262092fde5ff4f4eaa4fcb90644cc5be95bd1f5
+extern int flag;
+extern QMutex mutex;
+
+arrow::arrow(gamestate *state_param, target *t_param)
+{
+    state = state_param;
+    t = t_param;
+    QPixmap arro(":/images/a1.png");
+    QPixmap scaled= arro.scaled(QSize(40,25));
+    setPixmap(scaled);
+
+    time=0;
+    // connect
+    QTimer * timer = new QTimer();
+    connect(timer,SIGNAL(timeout()),this,SLOT(move()));
+
+    timer->start(50);
+}
+
+arrow::arrow(int i)
+{
+    QPixmap arro(":/images/a1.png");
+    QPixmap scaled= arro.scaled(QSize(40,25));
+    setPixmap(scaled);
+}
+
+void arrow::move(){
+    time += 0.3;
+    // move arrow right
+   /* QList<QGraphicsItem *> colliding_items = collidingItems();
+        for (int i = 0, n = colliding_items.size(); i < n; ++i){
+            if (typeid(*(colliding_items[i])) == typeid(target)){
+                target * t = dynamic_cast<target*>(colliding_items[i]);
+                // remove them both
+                //scene()->removeItem(colliding_items[i]);
+                points-> increase();
+                scene()->removeItem(this);
+                // delete them both
+                //delete colliding_items[i];
+                if(t && t->a == 1)
+                {
+                    t->a = 0;
+                    t->setRotation(0);
+                }
+               // int random_number = (rand() % 500)+30;
+                //colliding_items[i]->setPos(400,random_number);
+                QTime time = QTime::currentTime();
+                qsrand((uint)time.msec());
+                colliding_items[i]->setPos(qrand()%100+350,qrand()%600);
+                state->TargetPosition.setX(colliding_items[i]->x());
+                state->TargetPosition.setY(colliding_items[i]->y());
+                t->a = qrand()%2;
+                if(t->a == 0)
+                    t->setRotation(0);
+                else
+                    t->setRotation(180);
+                delete this;
+                state->isArrow1 = false;
+                flag=0;
+                return;
+            }
+        }
+    */
+    qDebug() << t->x() <<t->y();
+    if(pos().x()>=(t->x()-20) && pos().x()<=(t->x()+20) && pos().y()<(t->y()+20) && pos().y()>(t->y()-20)){
+        if(state->id ==1 )
+        {
+            state->hit = 1;
+        }
+
+            point1->increase();
+            state->points1 ++;
+            scene()->removeItem(this);
+            //lock(Acquire)
+<<<<<<< HEAD
+                /*if(t->a==1){
+=======
+            mutex.lock();
+            qDebug() << "bbbbb";
+                if(t->a==1){
+>>>>>>> fe226359e9767789bec27cd87db860d546da0c0a
+                    t->a = 0;
+                    t->setRotation(0);
+                }
+                QTime time = QTime::currentTime();
+                qsrand((uint)time.msec());
+                t->setPos(qrand()%100+350,qrand()%600);*/
+                t->reset();
+                state->TargetPosition.setX(t->x());
+                state->TargetPosition.setY(t->y());
+                /*t->a = qrand()%2;
+                if(t->a == 0)
+                    t->setRotation(0);
+                else
+                    t->setRotation(180);*/
+            //release(lock)
+                mutex.unlock();
+                delete this;
+                state->isArrow1=false;
+                flag=0;
+                return;
+
+    }
+    presentAngle = qRadiansToDegrees(qAtan((75*qSin(qDegreesToRadians(-1*angle)) - 10*time)/(75*qCos(qDegreesToRadians(angle)))));
+    setRotation(-1*presentAngle);
+    state->Arrow1Angle = -1*presentAngle;
+    double dy = 80 * qSin(qDegreesToRadians(-1*angle))*time-(5*(time*time));
+    double dx = 80 * qCos(qDegreesToRadians(angle)) * time;
+    setPos(initialX+dx,initialY-dy);
+    state->Arrow1Position.setX(pos().x());
+    state->Arrow1Position.setY(pos().y());
+    if (pos().x() > 475)
+    {
+        scene()->removeItem(this);
+        state->isArrow1 = false;
+        delete this;
+        flag=0;
+    }
+}
